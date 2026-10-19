@@ -1,8 +1,8 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "docsy",
-  "version": "1.0.9",
-  "description": "Search current, version-aware developer documentation with original source links through a read-only remote MCP server.",
+  "version": "1.0.10",
+  "description": "Account-linked, versioned developer documentation with official source URLs via OAuth 2.1 MCP.",
   "author": {
     "name": "Anton Baider",
     "url": "https://docsy.remcp.site"
@@ -97,11 +97,11 @@
           ]
         },
         "commerce": false,
-        "demo_recording_url": "https://github.com/getremcp/docsy-plugin/releases/download/plugin-v1.0.9/docsy-review-walkthrough-v1.0.9.mp4"
+        "demo_recording_url": "https://github.com/getremcp/docsy-plugin/releases/download/plugin-v1.0.10/docsy-review-walkthrough-v1.0.10.mp4"
       },
       "onboardingSkill": "./skills/find-docs/SKILL.md",
       "publication": {
-        "release_notes": "v1.0.9: Correct the approved 2026 dark icon variant and lock the ChatGPT icon, bright/dark logos to the exact user-approved Brand Kit SHA-256 hashes. Same canonical read-only MCP, source-linked search and five public tools."
+        "release_notes": "v1.0.10: Account-linked Docsy MCP with OAuth 2.1 PKCE, Google/Firebase consent, DCR, token rotation and revocation. Keeps five source-linked docs tools and approved 2026 logo kit. Requires server-side OAuth activation before publishing."
       }
     }
   }

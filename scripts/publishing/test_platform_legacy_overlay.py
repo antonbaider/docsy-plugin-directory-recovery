@@ -12,17 +12,30 @@ from package import FILES, SERVER, build
 from platform_legacy_overlay import LEGACY_URL, build_legacy_portal_update
 
 
+def build_registry_fixture(path: Path):
+    """Simulate an immutable older release whose MCP URL was /mcp/registry."""
+    build(path)
+    with ZipFile(path) as archive:
+        payload = {name: archive.read(name) for name in FILES}
+    mcp = json.loads(payload["mcp.json"])
+    mcp["mcpServers"]["docsy"]["url"] = "https://docsy.remcp.site/mcp/registry"
+    payload["mcp.json"] = (json.dumps(mcp, indent=2) + "\n").encode()
+    with ZipFile(path, "w") as archive:
+        for name in sorted(payload):
+            archive.writestr(name, payload[name])
+
+
 class ExistingPlatformUpdateTests(unittest.TestCase):
     def test_preserves_all_files_except_legacy_mcp_url(self):
         with tempfile.TemporaryDirectory() as folder:
             base = Path(folder)
             source, portal = base / "release.zip", base / "platform.zip"
-            build(source)
+            build_registry_fixture(source)
             build_legacy_portal_update(source, portal)
             with ZipFile(source) as a, ZipFile(portal) as b:
                 self.assertEqual(sorted(a.namelist()), sorted(FILES))
                 self.assertEqual(sorted(b.namelist()), sorted(FILES))
-                self.assertEqual(json.loads(a.read("mcp.json"))["mcpServers"]["docsy"]["url"], SERVER)
+                self.assertEqual(json.loads(a.read("mcp.json"))["mcpServers"]["docsy"]["url"], "https://docsy.remcp.site/mcp/registry")
                 self.assertEqual(json.loads(b.read("mcp.json"))["mcpServers"]["docsy"]["url"], LEGACY_URL)
                 for name in FILES:
                     if name != "mcp.json":
@@ -34,7 +47,7 @@ class ExistingPlatformUpdateTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as folder:
             base = Path(folder)
             source, legacy = base / "old-release.zip", base / "review.zip"
-            build(source)
+            build_registry_fixture(source)
             with ZipFile(source) as zip_file:
                 payload = {name: zip_file.read(name) for name in FILES}
             manifest = json.loads(payload["plugin.json"])
@@ -63,7 +76,7 @@ class ExistingPlatformUpdateTests(unittest.TestCase):
             base = Path(folder)
             release = base / "release.zip"
             out1, out2 = base / "one.zip", base / "two.zip"
-            build(release)
+            build_registry_fixture(release)
             self.assertEqual(build_legacy_portal_update(release, out1),
                              build_legacy_portal_update(release, out2))
             self.assertEqual(out1.read_bytes(), out2.read_bytes())
