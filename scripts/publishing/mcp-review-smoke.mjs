@@ -9,9 +9,11 @@ if(typeof defaultMcpUrl!=="string"||!defaultMcpUrl.startsWith("https://")){
 const mcpUrl=(process.env.DOCSY_MCP_URL??defaultMcpUrl).replace(/\/+$/,"");
 const base=(process.env.DOCSY_PUBLIC_URL??new URL(mcpUrl).origin).replace(/\/+$/,"");
 const skipLegal=process.argv.includes("--skip-public-pages");
+const accessToken=(process.env.DOCSY_MCP_ACCESS_TOKEN??"").trim();
 const headers={
   "content-type":"application/json",
-  "accept":"application/json, text/event-stream"
+  "accept":"application/json, text/event-stream",
+  ...(accessToken?{authorization:"Bearer "+accessToken}:{})
 };
 // The HTTP protocol version header must match the version negotiated by
 // initialize, not the client's preferred version.

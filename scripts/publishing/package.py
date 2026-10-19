@@ -15,7 +15,7 @@ ASSETS=[
     "assets/docsy-logo-dark-512.png"
 ]
 FILES=["plugin.json","mcp.json","skills/find-docs/SKILL.md",*ASSETS]
-SERVER="https://docsy.remcp.site/mcp/registry"
+SERVER="https://docsy.remcp.site/mcp"
 FIELDS=["websiteURL","privacyPolicyURL","termsOfServiceURL","supportURL"]
 
 def validate():
@@ -26,6 +26,14 @@ def validate():
     assert re.fullmatch(r"\d+\.\d+\.\d+",plugin["version"])
     server=mcp["mcpServers"]["docsy"]
     assert server["type"]=="streamable-http" and server["url"]==SERVER
+    oauth=server["extensions"]["com.openai"]["auth"]
+    assert oauth["type"]=="oauth"
+    assert oauth["client"]=={"mode":"dcr"}
+    assert oauth["registrationUrl"]=="https://docsy.remcp.site/oauth/register"
+    assert oauth["resource"]==SERVER
+    assert oauth["baseScopes"]==["docsy:read"]
+    assert set(oauth.get("defaultScopes",[]))=={"docsy:read","offline_access"}
+
     interface=plugin["extensions"]["com.openai"]["interface"]
     assert interface["displayName"]=="Docsy"
     assert len(interface["displayName"])<=30

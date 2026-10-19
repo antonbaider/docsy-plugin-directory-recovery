@@ -16,14 +16,14 @@ class PluginPackageTests(unittest.TestCase):
         plugin=validate()
         self.assertEqual(plugin["name"],"docsy")
         self.assertEqual(plugin["license"],"MIT")
-        self.assertEqual(plugin["version"],"1.0.9")
+        self.assertEqual(plugin["version"],"1.0.10")
         self.assertEqual(plugin["author"]["name"],"Anton Baider")
         self.assertEqual(plugin["extensions"]["com.openai"]["interface"]["developerName"],"Anton Baider")
         self.assertNotIn("free",plugin["extensions"]["com.openai"]["interface"]["longDescription"].lower())
         review=plugin["extensions"]["com.openai"]["review"]
         self.assertEqual(len(review["test_cases"]["positive"]),5)
         self.assertEqual(len(review["test_cases"]["negative"]),3)
-        self.assertIn("plugin-v1.0.9",review["demo_recording_url"])
+        self.assertIn("plugin-v1.0.10",review["demo_recording_url"])
         self.assertTrue(review["demo_recording_url"].endswith(".mp4"))
         self.assertTrue(plugin["extensions"]["com.openai"]["publication"]["release_notes"])
 
@@ -47,8 +47,8 @@ class PluginPackageTests(unittest.TestCase):
     def test_installation_docs_cover_personal_chatgpt_and_clients_without_claiming_approval(self):
         readme=(ROOT/"README.md").read_text()
         self.assertIn("ChatGPT Work before public directory approval",readme)
-        self.assertIn("No authentication",readme)
-        self.assertIn("codex mcp add docsy --url https://docsy.remcp.site/mcp/registry",readme)
+        self.assertIn("OAuth",readme)
+        self.assertIn("codex mcp add docsy --url https://docsy.remcp.site/mcp",readme)
         self.assertIn("MCP: Open User Configuration",readme)
         self.assertIn("getremcp/docsy-plugin",readme)
         self.assertIn("not yet approved",readme)
@@ -77,7 +77,11 @@ class PluginPackageTests(unittest.TestCase):
         plugin=json.loads((ROOT/"plugin.json").read_text())
         registry=json.loads((ROOT/"server.json").read_text())
         self.assertEqual(registry["name"],"io.github.getremcp/docsy")
-        self.assertEqual(registry["version"],plugin["version"])
+        # The public Registry must stay on the last actually released version
+        # while the next OAuth plugin candidate awaits production and review.
+        self.assertEqual(registry["version"],"1.0.9")
+        status=(ROOT/"docs/DISTRIBUTION-STATUS.md").read_text()
+        self.assertIn("| GitHub Plugin v1.0.10 | **Candidate",status)
         self.assertEqual(registry["title"],"Docsy")
         self.assertEqual(registry["repository"]["url"],"https://github.com/getremcp/docsy-plugin")
         self.assertEqual(registry["remotes"],[{"type":"streamable-http","url":"https://docsy.remcp.site/mcp/registry"}])

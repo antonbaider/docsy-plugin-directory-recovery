@@ -5,6 +5,7 @@ Last technical verification: 17 October 2026. **Listings, submissions, private i
 | Channel | Status | Evidence |
 | --- | --- | --- |
 | GitHub organization | **Published** | [getremcp/docsy-plugin](https://github.com/getremcp/docsy-plugin) |
+| GitHub Plugin v1.0.10 | **Candidate, not released** | OAuth 2.1 app update; depends on backend OAuth cutover, new login-demo recording and OpenAI review. |
 | GitHub Plugin v1.0.9 | **Published** | [Release ZIP and real-response demonstration](https://github.com/getremcp/docsy-plugin/releases/tag/plugin-v1.0.9); release integrity CI passed. |
 | GitHub Plugin v1.0.8 | **Published** | [Release ZIP and demonstration](https://github.com/getremcp/docsy-plugin/releases/tag/plugin-v1.0.8) |
 | Official MCP Registry | **Active, latest v1.0.9 (verified via Registry API)** | [Registry query](https://registry.modelcontextprotocol.io/v0.1/servers?search=getremcp) / [OIDC publish run](https://github.com/getremcp/docsy-plugin/actions/runs/38953737055) |
@@ -18,7 +19,7 @@ Last technical verification: 17 October 2026. **Listings, submissions, private i
 | MCP.Directory | **Submitted; awaiting review** | [Submission portal](https://mcp.directory/submit), accepted in public UI on 2026-10-16; not yet a published listing |
 | mcp.tc | **Queued for human review** | [Docsy submission status](https://mcp.tc/s/dc7OMIJio-fn2yHv); endpoint detected, no public listing yet |
 | mcpub | **Registered; discoverable in public search** | [mcpub](https://mcpub.dev/): verified public MCP tools `submit`, `get` and `search` on 2026-10-16; Docsy registered under `https://docsy.remcp.site` |
-| OpenAI Plugin Directory | **In review: v1.0.8** | Submitted on 2026-10-16 in the verified individual publisher account; **not approved or published**. Review status is visible only in the signed-in OpenAI Platform dashboard. |
+| OpenAI Plugin Directory | **In review: older registered version** | Submitted on 2026-10-16 in the verified individual publisher account; **not approved or published**. Review status is visible only in the signed-in OpenAI Platform dashboard. |
 | ChatGPT personal Docsy plugin | **Updated v1.0.14** | Personal app-backed configuration uploaded and verified through Plugin Creator on 2026-10-17; retains five skills and artwork. This is private and does **not** confer mobile availability or public directory approval. |
 | Official Claude Directory | **Not confirmed submitted** | Separate authenticated publisher review required |
 | Cursor Marketplace | **Submitted; awaiting Cursor review** | Publisher application accepted by [Cursor's official submission form](https://cursor.com/marketplace/publish) on 2026-10-16; the authenticated UI displayed “Thanks for applying”. **Not approved or publicly listed**. |
@@ -30,7 +31,7 @@ Last technical verification: 17 October 2026. **Listings, submissions, private i
 
 The GitHub repository contains the MIT-licensed plugin manifests and integration material. The operational crawler, database index and API backend are a **managed hosted service**, not distributed as an open-source self-hosted implementation in this repository.
 
-The plugin package version is **v1.0.9**; do not confuse it with the version string advertised by the hosted backend's MCP `serverInfo`, which may differ.
+The plugin package version is **v1.0.10** (candidate only, not published); do not confuse it with the version string advertised by the hosted backend's MCP `serverInfo`, which may differ.
 
 ### Original OpenAI Platform application
 

@@ -10,11 +10,39 @@ Open-source plugin for current, source-linked developer documentation in
 **Claude, OpenAI/ChatGPT/Codex and Cursor**. It connects to the hosted
 read-only Streamable HTTP MCP endpoint:
 
-    https://docsy.remcp.site/mcp/registry
+    https://docsy.remcp.site/mcp
 
 The five public tools are resolve-library-id, query-docs,
 list-library-versions, search and fetch. Anonymous public lookups do not
 require a Docsy API key. Only public indexed documentation is accessible.
+
+## Next release candidate: OAuth 2.1 (not yet published)
+
+The `v1.0.10` package is being prepared for the existing Docsy OpenAI App.
+It uses OAuth 2.1 with Dynamic Client Registration and the same Docsy Google
+account as the dashboard. **Do not submit this candidate or switch the public
+MCP authentication yet:** backend OAuth, the updated review recording and an
+end-to-end OpenAI consent test must all pass. The approved icon and 512px logo
+from the existing brand kit are unchanged.
+
+The version-matched reviewer video URL is reserved in the manifest but **does
+not yet contain an uploaded recording**:
+`https://github.com/getremcp/docsy-plugin/releases/download/plugin-v1.0.10/docsy-review-walkthrough-v1.0.10.mp4`.
+
+After the backend OAuth cutover, Codex CLI uses:
+
+```sh
+codex mcp add docsy --url https://docsy.remcp.site/mcp
+codex mcp login docsy
+```
+
+For local validation only (do not upload this candidate yet):
+
+```sh
+python3 scripts/publishing/package.py --output /tmp/docsy-plugin-v1.0.10.zip
+```
+
+See [OAuth release checklist](docs/OAUTH-RELEASE-CHECKLIST.md).
 
 ## Install
 
@@ -24,9 +52,9 @@ For the current verified status across publishing channels, see the [distributio
 
 The **v1.0.9** public release uses the exact approved 2026 dark-theme mark; the release ZIP is reproducible from the Git tag and validated by Release Integrity CI.
 
-Build the release ZIP with `python3 scripts/publishing/package.py --output /tmp/docsy-plugin-v1.0.9.zip`. The validated [v1.0.9 real-response recording](https://github.com/getremcp/docsy-plugin/releases/download/plugin-v1.0.9/docsy-review-walkthrough-v1.0.9.mp4) is available alongside the ZIP.
+Build the **published v1.0.9** release ZIP from its Git tag (not this candidate branch), e.g. `python3 scripts/publishing/package.py --output /tmp/docsy-plugin-v1.0.9.zip` when checked out at `plugin-v1.0.9`. The validated [v1.0.9 real-response recording](https://github.com/getremcp/docsy-plugin/releases/download/plugin-v1.0.9/docsy-review-walkthrough-v1.0.9.mp4) is available alongside the ZIP.
 
-Docsy **1.0.9** is published as an active remote server in the [official MCP Registry](https://registry.modelcontextprotocol.io/v0.1/servers?search=getremcp), registered as `io.github.getremcp/docsy`. The record references the organizational Streamable HTTP endpoint, `https://docsy.remcp.site/mcp/registry`, and this GitHub repository.
+Docsy **1.0.9** is published as an active remote server in the [official MCP Registry](https://registry.modelcontextprotocol.io/v0.1/servers?search=getremcp), registered as `io.github.getremcp/docsy`. The record references the organizational Streamable HTTP endpoint, `https://docsy.remcp.site/mcp`, and this GitHub repository.
 
 It is also available from the [Docsy listing on Smithery](https://smithery.ai/servers/getremcp/docsy), under `getremcp/docsy`. The Smithery publishing service accepted the release and discovered five MCP tools; directory health may be updated asynchronously.
 
@@ -54,10 +82,9 @@ codex plugin list
 ```
 
 This is a public, user-installable Codex Git marketplace, **not** a claim of
-approval or publication in the official OpenAI Plugin Directory. The remote
-MCP server requires no Docsy account or API key for public docs.
+approval or publication in the official OpenAI Plugin Directory. The currently deployed remote MCP server supports anonymous public docs; the upcoming OAuth release will require account linking.
 
-For other MCP clients, use the remote endpoint `https://docsy.remcp.site/mcp/registry`. The official registry manifest is kept in [`server.json`](server.json).
+For other MCP clients, use the remote endpoint `https://docsy.remcp.site/mcp`. The official registry manifest is kept in [`server.json`](server.json).
 
 ### Use Docsy in ChatGPT Work before public directory approval
 
@@ -65,7 +92,7 @@ You can connect the hosted read-only Docsy MCP privately; this does **not**
 publish Docsy in the universal OpenAI Plugins Directory.
 
 1. Open **ChatGPT → Plugins** and select **+ → Add custom MCP server**.
-2. Name it **Docsy**, enter **`https://docsy.remcp.site/mcp/registry`**, and select **No authentication**.
+2. Name it **Docsy**, enter **`https://docsy.remcp.site/mcp`**, and select **OAuth 2.1 account linking (after OAuth rollout)**.
 3. Review the risk notice and approve the custom connection. Select **Create as a plugin**.
 4. Under **Personal**, install the created plugin. Open **ChatGPT Work** and use **@Docsy**
    to look up versioned documentation with source links.
@@ -79,7 +106,7 @@ See the [official OpenAI quickstart](https://developers.openai.com/plugins/quick
 In **Codex CLI** add the remote server globally:
 
 ```sh
-codex mcp add docsy --url https://docsy.remcp.site/mcp/registry
+codex mcp add docsy --url https://docsy.remcp.site/mcp
 codex mcp get docsy
 ```
 
@@ -91,7 +118,7 @@ under the existing `servers` object. Do not replace other configured servers:
   "servers": {
     "docsy": {
       "type": "http",
-      "url": "https://docsy.remcp.site/mcp/registry"
+      "url": "https://docsy.remcp.site/mcp"
     }
   }
 }
@@ -113,7 +140,7 @@ Alternatively, add this remote server under MCP settings or in
 `.cursor/mcp.json`:
 
 ```json
-{"mcpServers":{"docsy":{"url":"https://docsy.remcp.site/mcp/registry"}}}
+{"mcpServers":{"docsy":{"url":"https://docsy.remcp.site/mcp"}}}
 ```
 
 - **Claude Code**: the community marketplace commands above work with the

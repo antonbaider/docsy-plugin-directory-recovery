@@ -45,8 +45,12 @@ def build_legacy_portal_update(source: Path, output: Path, *,
     if list(mcp["mcpServers"]) != ["docsy"]:
         raise ValueError("Unexpected MCP server manifest")
     server = mcp["mcpServers"]["docsy"]
-    if server != {"type": "streamable-http", "url": SERVER}:
-        raise ValueError("Expected the canonical public read-only MCP server")
+    if server.get("type") != "streamable-http" or server.get("url") not in {
+        SERVER, "https://docsy.remcp.site/mcp/registry"
+    }:
+        raise ValueError("Expected the original or canonical Docsy MCP server")
+    if server["url"] == LEGACY_URL:
+        raise ValueError("Expected an old Registry-based release, canonical alias already applied")
     server["url"] = LEGACY_URL
     files["mcp.json"] = (json.dumps(mcp, indent=2, ensure_ascii=False) + "\n").encode()
     output.parent.mkdir(parents=True, exist_ok=True)

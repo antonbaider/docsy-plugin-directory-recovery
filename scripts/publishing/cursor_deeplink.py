@@ -9,7 +9,7 @@ from pathlib import Path
 from urllib.parse import quote,parse_qs,urlsplit
 
 ROOT=Path(__file__).resolve().parents[2]
-SERVER="https://docsy.remcp.site/mcp/registry"
+SERVER="https://docsy.remcp.site/mcp"
 PREFIX="cursor://anysphere.cursor-deeplink/mcp/install"
 
 def install_link():
