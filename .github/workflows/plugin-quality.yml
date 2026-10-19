@@ -44,7 +44,9 @@ jobs:
         run: |
           python3 -m pip install --disable-pip-version-check 'jsonschema==4.25.1'
           python3 - <<'PY'
-          import json,urllib.request,jsonschema
+          import json,urllib.request,jsonschema,sys
+          sys.path.insert(0, 'scripts/publishing')
+          from openai_oauth_overlay import portable_mcp_for_schema
           for name in ('plugin','mcp'):
               with urllib.request.urlopen(
                   'https://agent-plugins.org/schemas/1.0.0/'+name+'.schema.json',
@@ -53,8 +55,12 @@ jobs:
                   schema=json.load(response)
               with open(name+'.json',encoding='utf-8') as f:
                   manifest=json.load(f)
-              jsonschema.Draft202012Validator(schema).validate(manifest)
-              print(name,'Agent Plugins 1.0.0 schema valid')
+              # The base Agent Plugins 1.0.0 MCP schema excludes vendor
+              # extensions. Validate OpenAI OAuth fields exactly before
+              # validating the portable projection against the base schema.
+              portable = portable_mcp_for_schema(manifest) if name=='mcp' else manifest
+              jsonschema.Draft202012Validator(schema).validate(portable)
+              print(name,'portable schema and OAuth overlay valid')
           PY
       - name: Upload allowlisted package
         uses: actions/upload-artifact@v4
