@@ -1,0 +1,99 @@
+<p align="center">
+  <img src="assets/docsy-icon-192.png" width="104" height="104" alt="Docsy logo">
+</p>
+
+<h1 align="center">Docsy</h1>
+
+<p align="center"><strong>Current documentation. Exact versions. Verifiable sources.</strong></p>
+
+<p align="center">Version-aware developer documentation, available from your AI assistant through read-only MCP.</p>
+
+<p align="center">
+  <a href="https://github.com/getremcp/docsy-plugin/releases/latest"><img alt="Stable plugin release" src="https://img.shields.io/github/v/release/getremcp/docsy-plugin?style=flat-square&label=stable"></a>
+  <a href="https://github.com/getremcp/docsy-plugin/releases"><img alt="Release downloads" src="https://img.shields.io/github/downloads/getremcp/docsy-plugin/total?style=flat-square&label=downloads"></a>
+  <a href="LICENSE"><img alt="MIT license" src="https://img.shields.io/badge/license-MIT-1f2328?style=flat-square"></a>
+  <a href="https://github.com/getremcp/docsy-plugin/stargazers"><img alt="GitHub stars" src="https://img.shields.io/github/stars/getremcp/docsy-plugin?style=flat-square"></a>
+</p>
+
+<p align="center">
+  <a href="https://registry.modelcontextprotocol.io/?q=io.github.getremcp%2Fdocsy"><img alt="Official MCP Registry: listed" src="https://img.shields.io/badge/MCP%20Registry-listed-1f2328?style=flat-square"></a>
+  <a href="https://glama.ai/mcp/connectors/io.github.getremcp/docsy"><img alt="Glama: listed" src="https://img.shields.io/badge/Glama-listed-1f2328?style=flat-square"></a>
+  <a href="https://www.npmjs.com/package/@remcp/docsy-sdk"><img alt="npm SDK version" src="https://img.shields.io/npm/v/%40remcp%2Fdocsy-sdk?style=flat-square&label=npm%20SDK"></a>
+  <a href="https://www.npmjs.com/package/@remcp/docsy-cli"><img alt="npm CLI version" src="https://img.shields.io/npm/v/%40remcp%2Fdocsy-cli?style=flat-square&label=npm%20CLI"></a>
+</p>
+
+<p align="center">
+  <a href="https://docsy.remcp.site">Website</a> ·
+  <a href="https://docsy.remcp.site/docs">Docs</a> ·
+  <a href="docs/GETTING-STARTED.md">Setup guide</a> ·
+  <a href="docs/CLIENT-INTEGRATIONS.md">AI clients</a> ·
+  <a href="https://github.com/getremcp/docsy-plugin/releases">Releases</a> ·
+  <a href="https://docsy.remcp.site/support">Support</a>
+</p>
+
+---
+
+## Source-linked documentation for AI
+
+Docsy retrieves current and version-specific developer documentation for libraries, frameworks and SDKs. Results include original source links instead of untraceable summaries.
+
+**Five read-only MCP tools:** `resolve-library-id`, `list-library-versions`, `query-docs`, `search` and `fetch`.
+
+## Connect
+
+**Canonical remote MCP endpoint:** `https://docsy.remcp.site/mcp/registry`
+
+The hosted MCP service **requires OAuth 2.1 account authorization**. Complete the sign-in prompted by your client. Existing clients may continue to use `https://docsy.remcp.site/mcp`.
+
+| Client | How to connect |
+| --- | --- |
+| **ChatGPT** | Add Docsy as a remote MCP connector where supported, then authorize. |
+| **Claude Code** | Run the command below. |
+| **Codex CLI** | Add the server and log in with the commands below. |
+| **Cursor, VS Code and other MCP clients** | Use the remote HTTP URL in MCP settings. |
+
+**Claude Code**
+
+```sh
+claude mcp add --transport http docsy https://docsy.remcp.site/mcp/registry
+```
+
+**Codex CLI**
+
+```sh
+codex mcp add docsy --url https://docsy.remcp.site/mcp/registry
+codex mcp login docsy
+```
+
+**Claude Code community marketplace**
+
+```sh
+claude plugin marketplace add getremcp/docsy-plugin
+claude plugin install docsy@docsy-community
+```
+
+For additional clients, see the **[Full setup guide: connecting Docsy to your AI clients](docs/GETTING-STARTED.md)** and [13-client integration reference](docs/CLIENT-INTEGRATIONS.md). A listing in a directory is not equivalent to official OpenAI or Anthropic marketplace approval.
+
+## Releases and packages
+
+| Channel | Distribution |
+| --- | --- |
+| [GitHub Releases](https://github.com/getremcp/docsy-plugin/releases) | Vetted versioned plugin ZIPs and review recordings |
+| [Official MCP Registry](https://registry.modelcontextprotocol.io/?q=io.github.getremcp%2Fdocsy) | Published `io.github.getremcp/docsy` discovery record |
+| [npm SDK](https://www.npmjs.com/package/@remcp/docsy-sdk) | `@remcp/docsy-sdk` TypeScript documentation lookup |
+| [npm CLI](https://www.npmjs.com/package/@remcp/docsy-cli) | `@remcp/docsy-cli` terminal documentation lookup |
+
+**Stable:** [plugin-v1.0.9](https://github.com/getremcp/docsy-plugin/releases/tag/plugin-v1.0.9). **Review candidate (prerelease):** [plugin-v1.0.10](https://github.com/getremcp/docsy-plugin/releases/tag/plugin-v1.0.10). Pre-releases are candidates, not proof of marketplace approval.
+
+## Security and project scope
+
+This is Docsy's **public release-only repository**. It contains vetted plugin manifests, skill metadata, approved artwork and installation instructions. Backend code, databases, crawlers and deployment infrastructure live outside this public distribution.
+
+- **Read-only documentation tools.** Docsy cannot inspect private repositories or execute commands on your device.
+- **Account-scoped OAuth.** Review and revoke sessions from [Connected applications](https://docsy.remcp.site/dashboard/connections).
+- **Traceable releases.** Use [immutable version tags and attached assets](https://github.com/getremcp/docsy-plugin/releases) instead of unreviewed development branches.
+- **Public REST and remote MCP differ.** REST documentation lookups may be anonymous within rate limits; remote MCP requires OAuth.
+
+[Security](SECURITY.md) · [MIT License](LICENSE) · [Privacy](https://docsy.remcp.site/privacy) · [Terms](https://docsy.remcp.site/terms) · [Support](https://docsy.remcp.site/support)
+
+<p align="center"><sub>Independent documentation service. Third-party marks are the property of their owners.</sub></p>
