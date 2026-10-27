@@ -4,6 +4,8 @@
 
 <h1 align="center">Docsy MCP Plugin</h1>
 
+<p align="center"><a href="docs/README.zh-CN.md">简体中文使用指南</a> · <a href="docs/ANNOUNCEMENT.zh-CN.md">中文技术介绍</a></p>
+
 <p align="center"><strong>Current documentation. Exact versions. Verifiable sources.</strong></p>
 
 <p align="center">Bring official, version-specific developer docs into ChatGPT, Claude Code, Codex and other AI clients — with source links.</p>
