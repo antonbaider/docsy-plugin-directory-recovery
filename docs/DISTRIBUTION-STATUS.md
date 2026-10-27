@@ -1,6 +1,6 @@
 # Docsy public distribution status
 
-> **Directory PR recovery (27 October 2026):** Deleted source forks from the 26 October cleanup have been recreated. [35 replacement PRs and the original-to-new mapping](#directory-pr-recovery-27-october-2026) are verified open and awaiting upstream review. Previous merged listings remain unchanged.
+> **Directory PR recovery (27 October 2026):** Deleted source forks from the 26 October cleanup have been recreated. [36 recovered PRs and the original-to-new mapping](#directory-pr-recovery-27-october-2026) are verified open and awaiting upstream review. Previous merged listings remain unchanged.
 
 Checked **25 October 2026**. A submitted directory listing is **not** an approved marketplace installation.
 
@@ -121,7 +121,7 @@ Docsy's earlier update returned `403 Updating servers has been removed`: this is
 
 ## Directory PR recovery (27 October 2026)
 
-This is a record of the accidental source-fork deletion on **26 October 2026** and the replacement GitHub pull requests. Each replacement uses the **exact original commit SHA** preserved by GitHub; original PR discussion remains accessible. All replacement PRs are **pending maintainer review**, not approved listings.
+This is a record of the accidental source-fork deletion on **26 October 2026** and the replacement GitHub pull requests. The original contribution commits are preserved in recreated fork histories; some head branches were updated to current upstream and current OAuth metadata. Original PR discussions remain accessible. All replacement PRs are **pending maintainer review**, not approved listings.
 
 | Directory / repository | Original (closed) | Replacement | State at verification |
 | --- | --- | --- | --- |
@@ -149,9 +149,10 @@ This is a record of the accidental source-fork deletion on **26 October 2026** a
 | `justxor/awesome-ai-devtools-ru` | [#3](https://github.com/justxor/awesome-ai-devtools-ru/pull/3) | [#7](https://github.com/justxor/awesome-ai-devtools-ru/pull/7) | Open — SHA verified |
 | `Kilo-Org/kilo-marketplace` | [#478](https://github.com/Kilo-Org/kilo-marketplace/pull/478) | [#497](https://github.com/Kilo-Org/kilo-marketplace/pull/497) | Open — SHA verified |
 | `mahmoudsajjadi/awesome-ai-coding-tools` | [#7](https://github.com/mahmoudsajjadi/awesome-ai-coding-tools/pull/7) | [#10](https://github.com/mahmoudsajjadi/awesome-ai-coding-tools/pull/10) | Open — SHA verified |
-| `mcpHQ/awesome-mcp-servers` | [#397](https://github.com/mcpHQ/awesome-mcp-servers/pull/397) | [#452](https://github.com/mcpHQ/awesome-mcp-servers/pull/452) | Open — SHA verified |
+| `mcpHQ/awesome-mcp-servers` | [#397](https://github.com/mcpHQ/awesome-mcp-servers/pull/397) | [#452](https://github.com/mcpHQ/awesome-mcp-servers/pull/452) | Open — conflict resolved; generated outputs checked |
 | `mctrinh/awesome-mcp-servers` | [#179](https://github.com/mctrinh/awesome-mcp-servers/pull/179) | [#185](https://github.com/mctrinh/awesome-mcp-servers/pull/185) | Open — SHA verified |
 | `MobinX/awesome-mcp-list` | [#926](https://github.com/MobinX/awesome-mcp-list/pull/926) | [#962](https://github.com/MobinX/awesome-mcp-list/pull/962) | Open — SHA verified |
+| `openmodelsrun/mcp` | [#55](https://github.com/openmodelsrun/mcp/pull/55) | [#60](https://github.com/openmodelsrun/mcp/pull/60) | Open — OAuth v1.0.9; 233-file validation passed |
 | `PenguinMiaou/awesome-claude-code-plugins` | [#10](https://github.com/PenguinMiaou/awesome-claude-code-plugins/pull/10) | [#12](https://github.com/PenguinMiaou/awesome-claude-code-plugins/pull/12) | Open — SHA verified |
 | `Piebald-AI/awesome-gemini-cli-extensions` | [#96](https://github.com/Piebald-AI/awesome-gemini-cli-extensions/pull/96) | [#105](https://github.com/Piebald-AI/awesome-gemini-cli-extensions/pull/105) | Open — SHA verified |
 | `rohitg00/awesome-devops-mcp-servers` | [#382](https://github.com/rohitg00/awesome-devops-mcp-servers/pull/382) | [#386](https://github.com/rohitg00/awesome-devops-mcp-servers/pull/386) | Open — SHA verified |
@@ -163,9 +164,11 @@ This is a record of the accidental source-fork deletion on **26 October 2026** a
 
 ## Intentional exclusions
 
-- The original [AlexMili/Awesome-MCP #326](https://github.com/AlexMili/Awesome-MCP/pull/326) was **closed 24 October**, before the fork-deletion incident; not resubmitted automatically.
-- The historical ccplugins/awesome-claude-code-plugins PR #821 could not be fetched (404) during this recovery.
-- Already merged PRs in AIAnytime, TensorBlock, Sagargupta16, VoltAgent, and ToolSDK remain unchanged.
+- The original [AlexMili/Awesome-MCP #326](https://github.com/AlexMili/Awesome-MCP/pull/326) was **closed 24 October** by its maintainer because plugin manifests alone are not the hosted MCP server source. It was not resubmitted.
+- The referenced ccplugins/awesome-claude-code-plugins PR #821 is inaccessible; the repository has pull requests disabled (GitHub 410), so a replacement PR cannot be submitted there.
+- Already merged PRs in AIAnytime, TensorBlock, Sagargupta16, VoltAgent, ToolSDK, and punkpeye/awesome-remote-mcp-servers remain unchanged.
+
+- The earlier [Cline #244](https://github.com/cline/marketplace/pull/244) was automatically closed after fork deletion; the currently open [Cline #346](https://github.com/cline/marketplace/pull/346) is the replacement contribution, avoiding duplicate PRs.
 
 ## Recovery method
 
