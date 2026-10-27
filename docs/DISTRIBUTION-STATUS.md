@@ -173,3 +173,16 @@ This is a record of the accidental source-fork deletion on **26 October 2026** a
 ## Recovery method
 
 Source fork names changed where needed to avoid collisions, but commit objects, original changes, and target branches were restored via GitHub API and compared to upstream. Original closed PRs cannot be reopened because GitHub rejects the operation after deletion of the original source repository (HTTP 422).
+
+## International developer outreach — 27 October 2026
+
+| Channel | Docsy result | ReMCP result | Notes |
+| --- | --- | --- | --- |
+| LobeHub MCP Marketplace | Published: owner-claimed existing listing `getremcp-docsy-plugin`, updated from 1.0.6 to 1.0.9 | Published: `getremcp-remcp` v0.2.189 | Confirmed using LobeHub official CLI with GitHub ownership linked; listing enrichment may be asynchronous |
+| China: yzfly/Awesome-MCP-ZH | [PR #867](https://github.com/yzfly/Awesome-MCP-ZH/pull/867) open | [PR #866](https://github.com/yzfly/Awesome-MCP-ZH/pull/866) open | Chinese catalog contribution; **not yet merged** |
+| United States: xAI / Grok Build plugin catalog | [PR #1698](https://github.com/xai-org/plugin-marketplace/pull/1698) open; local catalog/index validation and initial security checks passed | Not submitted | xAI forbids arbitrary remote shell execution in plugin submissions; this boundary needs review for ReMCP |
+| Chinese documentation & developer article | [PR #103](https://github.com/getremcp/docsy-plugin/pull/103) merged; [onboarding](README.zh-CN.md), [technical introduction](ANNOUNCEMENT.zh-CN.md) public | — | Strict public-file allowlist preserved and CI passed |
+| MCP.Directory | Already submitted 24 October; repeated check reported repository already submitted | Previously submitted | Do not submit duplicates |
+| GitHub MCP community discussions | Two developer showcases drafted, **not published** | Same | GitHub GraphQL CreateDiscussion denied under linked token; separately opened browser was unauthenticated |
+
+External PR status is subject to maintainers' review. Only count a catalog listing as published when confirmed by the publisher. Never describe community PR submission as official approval.
