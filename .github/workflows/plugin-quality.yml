@@ -33,6 +33,7 @@ jobs:
             'assets/docsy-wordmark.svg','assets/github-social-preview-1280x640.png',
             'docs/GETTING-STARTED.md','docs/CLIENT-INTEGRATIONS.md',
             'docs/BRAND-ASSETS.md','docs/DISTRIBUTION-STATUS.md',
+            'docs/README.zh-CN.md','docs/ANNOUNCEMENT.zh-CN.md',
             'skills/find-docs/SKILL.md',
           }
           actual={p.as_posix() for p in root.rglob('*')
