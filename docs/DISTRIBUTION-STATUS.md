@@ -198,3 +198,11 @@ External PR status is subject to maintainers' review. Only count a catalog listi
 - **Previously submitted directories:** do not duplicate existing submissions to MCP.Directory, AIBase, MCP Market and other locations recorded above.
 
 All descriptions identify these posts as **first-party maintainer writing**. OAuth sign-in and ReMCP's state-changing device operations are disclosed; neither service is described as an anonymous public endpoint.
+
+## Follow-up: LobeHub localization and ReMCP release — 28 October 2026
+
+- **Verified ReMCP release:** [v0.2.194](https://github.com/getremcp/remcp/releases/tag/v0.2.194) was published to GitHub and npm on 28 October. Its optional terminal QR opens the signed-in device pairing approval flow; this is not passwordless authorization.
+- **LobeHub current publication:** the owner-connected CLI confirmed **ReMCP `getremcp-remcp@0.2.194` published**, upgrading the earlier 0.2.189 listing. Docsy remains **`getremcp-docsy-plugin@1.0.9` published**. Existing seven ReMCP catalog tool schemas were preserved.
+- **Owner-edited localized listings:** updated **zh-CN** descriptions and summaries for both products. Added clear **en-US** summaries for both. Official CLI writes succeeded, and follow-up JSON verified both language summaries.
+- **Chinese education submission:** [liyupi/ai-guide PR #89](https://github.com/liyupi/ai-guide/pull/89) proposes an original beginner article about versioned documentation, OAuth, local device pairing, and read vs write MCP boundaries. It remains a **PR awaiting editorial review**, not a published page of the learning site.
+- **Open directory PRs:** [xAI #1698](https://github.com/xai-org/plugin-marketplace/pull/1698), [China Docsy #867](https://github.com/yzfly/Awesome-MCP-ZH/pull/867), [China ReMCP #866](https://github.com/yzfly/Awesome-MCP-ZH/pull/866), and [developer list #1130](https://github.com/ai-for-developers/awesome-ai-coding-tools/pull/1130) were still open when checked. Do not claim acceptance.
