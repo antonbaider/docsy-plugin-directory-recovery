@@ -186,3 +186,15 @@ Source fork names changed where needed to avoid collisions, but commit objects, 
 | GitHub MCP community discussions | Two developer showcases drafted, **not published** | Same | GitHub GraphQL CreateDiscussion denied under linked token; separately opened browser was unauthenticated |
 
 External PR status is subject to maintainers' review. Only count a catalog listing as published when confirmed by the publisher. Never describe community PR submission as official approval.
+
+## Follow-up: United States and China — 28 October 2026
+
+- **US developer-tool directory:** [ai-for-developers/awesome-ai-coding-tools PR #1130](https://github.com/ai-for-developers/awesome-ai-coding-tools/pull/1130) adds Docsy and ReMCP to the MCP section; submitted, awaiting upstream maintainer review, not a live catalog placement.
+- **US xAI / Grok Build:** [PR #1698](https://github.com/xai-org/plugin-marketplace/pull/1698) was synchronized with current upstream main, then passed its local catalog/index validators. Socket Security and Semgrep checks passed again; the PR remains open and awaiting reviewer approval. Do not equate a successful security scan with catalog acceptance.
+- **English maintainer posts, published publicly:** [Docsy: version-aware source-linked docs](https://gist.github.com/antonbaider/f56972ad52ef93caea17097ec0121572) and [ReMCP: paired-computer access and security boundaries](https://gist.github.com/antonbaider/ac9b0d908f693c9f661a07e658a1b384). Both are public GitHub Gists, **not posts on external discussion forums**.
+- **Chinese maintainer post, published publicly:** [ReMCP 配对电脑与 OAuth 安全说明](https://gist.github.com/antonbaider/0190650ff3a58f0c824f5b8c19458bb6). The [ReMCP China PR #866](https://github.com/yzfly/Awesome-MCP-ZH/pull/866) description was updated with this link. The [Docsy China PR #867](https://github.com/yzfly/Awesome-MCP-ZH/pull/867) remains open, with Chinese setup documentation already included.
+- **ModelScope China:** confirmed the MCP-creation page is available, but unauthenticated browser session redirects to login; **nothing submitted**. A signed-in ModelScope publisher account is required.
+- **Official MCP community discussions:** earlier create attempts were denied by the GitHub connection's discussion permissions, and a separate browser was unauthenticated; **nothing posted**. Do not claim participation or request extra privileges as if they already exist.
+- **Previously submitted directories:** do not duplicate existing submissions to MCP.Directory, AIBase, MCP Market and other locations recorded above.
+
+All descriptions identify these posts as **first-party maintainer writing**. OAuth sign-in and ReMCP's state-changing device operations are disclosed; neither service is described as an anonymous public endpoint.
