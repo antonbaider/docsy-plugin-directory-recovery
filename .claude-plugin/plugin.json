@@ -1,6 +1,6 @@
 {
   "name": "docsy",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "Current, source-linked and version-aware library documentation through Docsy MCP.",
   "author": {
     "name": "Anton Baider",

@@ -58,6 +58,11 @@ jobs:
           mcp=json.loads(pathlib.Path('mcp.json').read_text())
           server=json.loads(pathlib.Path('server.json').read_text())
           assert plugin['name']=='docsy'
+          claude=json.loads(pathlib.Path('.claude-plugin/plugin.json').read_text())
+          assert claude['name']==plugin['name']
+          assert claude['version']==plugin['version'], 'Claude plugin version must match root plugin version'
+          hosted=json.loads(pathlib.Path('.mcp.json').read_text())
+          assert hosted['mcpServers']['docsy']['url']=='https://docsy.remcp.site/mcp/registry'
           assert re.fullmatch(r'\d+\.\d+\.\d+',plugin['version'])
           assert mcp['mcpServers']['docsy']['url']=='https://docsy.remcp.site/mcp'
           assert server['name']=='io.github.getremcp/docsy'
