@@ -1,126 +1,80 @@
 <p align="center">
-  <img src="assets/docsy-icon-192.png" width="104" height="104" alt="Docsy logo">
+  <img src="assets/docsy-icon-192.png" width="96" height="96" alt="Docsy logo">
 </p>
 
-<h1 align="center">Docsy MCP Plugin</h1>
-
-<p align="center"><a href="docs/README.zh-CN.md">简体中文使用指南</a> · <a href="docs/ANNOUNCEMENT.zh-CN.md">中文技术介绍</a></p>
-
-<p align="center"><strong>Current documentation. Exact versions. Verifiable sources.</strong></p>
-
-<p align="center">Bring official, version-specific developer docs into ChatGPT, Claude Code, Codex and other AI clients — with source links.</p>
+<h1 align="center">Docsy</h1>
+<p align="center"><strong>Developer documentation your AI assistant can cite.</strong></p>
+<p align="center">Official source links · Library versions · Focused MCP retrieval · Five read-only tools</p>
 
 <p align="center">
-  <a href="https://github.com/getremcp/docsy-plugin/releases/latest"><img alt="Stable plugin release" src="https://img.shields.io/github/v/release/getremcp/docsy-plugin?style=flat-square&label=stable"></a>
-  <a href="https://github.com/getremcp/docsy-plugin/releases"><img alt="Release downloads" src="https://img.shields.io/github/downloads/getremcp/docsy-plugin/total?style=flat-square&label=downloads"></a>
-  <a href="LICENSE"><img alt="MIT license" src="https://img.shields.io/badge/license-MIT-1f2328?style=flat-square"></a>
-  <a href="https://github.com/getremcp/docsy-plugin/stargazers"><img alt="GitHub stars" src="https://img.shields.io/github/stars/getremcp/docsy-plugin?style=flat-square"></a>
-  <a href="https://github.com/getremcp/docsy-plugin/actions/workflows/plugin-quality.yml"><img alt="Release validation status" src="https://img.shields.io/github/actions/workflow/status/getremcp/docsy-plugin/plugin-quality.yml?branch=main&label=release%20checks&style=flat-square"></a>
+  <a href="https://chatgpt.com/plugins/plugin_asdk_app_6ad6814ca7708191956117b3a3b58eb5"><strong>Open Docsy in ChatGPT</strong></a>
+  · <a href="#connect-your-ai-client">Connect an MCP client</a>
+  · <a href="docs/ACCOUNT-FREE-REVIEW.md">Try the public endpoint</a>
+  · <a href="https://docsy.remcp.site/docs">Documentation</a>
 </p>
 
 <p align="center">
-  <a href="https://registry.modelcontextprotocol.io/?q=io.github.getremcp%2Fdocsy"><img alt="Official MCP Registry: listed" src="https://img.shields.io/badge/MCP%20Registry-listed-1f2328?style=flat-square"></a>
-  <a href="https://github.com/getremcp/docsy-plugin/blob/main/.claude-plugin/marketplace.json"><img alt="Claude Code community plugin" src="https://img.shields.io/badge/Claude%20Code-community%20plugin-1f2328?style=flat-square"></a>
-  <a href="https://github.com/getremcp/docsy/releases/tag/gemini-v1.0.0"><img alt="Gemini CLI extension v1.0.0" src="https://img.shields.io/badge/Gemini%20CLI-extension%201.0.0-1f2328?style=flat-square"></a>
-  <a href="https://docsy.remcp.site/docs"><img alt="Five read-only MCP tools" src="https://img.shields.io/badge/MCP%20tools-5%20read--only-1f2328?style=flat-square"></a>
-  <a href="https://mcpub.dev"><img alt="mcpub registered" src="https://img.shields.io/badge/mcpub-registered-1f2328?style=flat-square"></a>
-  <a href="https://plugandship.dev/p/docsy-mcp"><img alt="Plug and Ship free launch scheduled November 12" src="https://img.shields.io/badge/Plug%20%26%20Ship-scheduled%20Nov%2012-1f2328?style=flat-square"></a>
-  <a href="https://www.npmjs.com/package/@remcp/docsy-sdk"><img alt="npm SDK version" src="https://img.shields.io/npm/v/%40remcp%2Fdocsy-sdk?style=flat-square&label=npm%20SDK"></a>
-  <a href="https://www.npmjs.com/package/@remcp/docsy-cli"><img alt="npm CLI version" src="https://img.shields.io/npm/v/%40remcp%2Fdocsy-cli?style=flat-square&label=npm%20CLI"></a>
+  <a href="https://github.com/getremcp/docsy-plugin/actions/workflows/plugin-quality.yml"><img alt="Public plugin checks" src="https://img.shields.io/github/actions/workflow/status/getremcp/docsy-plugin/plugin-quality.yml?branch=main&label=checks"></a>
+  <a href="https://github.com/getremcp/docsy-plugin/releases/latest"><img alt="Latest stable release" src="https://img.shields.io/github/v/release/getremcp/docsy-plugin?label=stable"></a>
+  <a href="LICENSE"><img alt="MIT license" src="https://img.shields.io/badge/license-MIT-222"></a>
 </p>
 
-<p align="center">
-  <a href="https://glama.ai/mcp/connectors/io.github.getremcp/docsy"><img alt="Docsy MCP connector – tool definition quality and endpoint health on Glama" src="https://glama.ai/mcp/connectors/io.github.getremcp/docsy/badges/score.svg"></a>
-</p>
-
-<p align="center">
-  <a href="https://docsy.remcp.site">Website</a> ·
-  <a href="https://docsy.remcp.site/docs">Docs</a> ·
-  <a href="docs/DISTRIBUTION-STATUS.md">Directory status</a> ·
-  <a href="docs/GETTING-STARTED.md">Setup guide</a> ·
-  <a href="docs/CLIENT-INTEGRATIONS.md">AI clients</a> ·
-  <a href="https://github.com/getremcp/docsy"><strong>SDK & CLI repository ↗</strong></a> ·
-  <a href="https://github.com/getremcp/docsy-plugin/releases">Releases</a> ·
-  <a href="https://docsy.remcp.site/support">Support</a>
-</p>
+[简体中文](docs/README.zh-CN.md) · [Website](https://docsy.remcp.site) · [Support](https://docsy.remcp.site/support)
 
 ---
 
+## Why Docsy?
 
-## Choose how to use Docsy
+Coding assistants can mix documentation from different versions or give answers without a checkable source. Docsy helps them resolve the right library, find version-specific documentation and return links to the original publisher files or pages.
 
-| AI assistants | Developer tooling |
+- **Version-aware:** ask for a specific release and see which versions are indexed; upstream tags alone do not imply indexed documentation.
+- **Source-linked:** excerpts include origin URLs and, when available, a pinned Git revision.
+- **Focused:** retrieve the relevant passage or request links without loading an entire manual.
+- **Read-only:** no local shell execution, file writes or access to your private repositories.
+
+### MCP tools
+
+| Tool | Use it for |
 | --- | --- |
-| **[Docsy AI / MCP Plugin →](https://github.com/getremcp/docsy-plugin)** — connect ChatGPT, Claude Code, Codex or Cursor | **[Docsy SDK & CLI →](https://github.com/getremcp/docsy)** — install TypeScript SDK, npm CLI or Gemini CLI extension |
+| `resolve-library-id` | Match a framework, package or SDK name to its documentation ID |
+| `list-library-versions` | Discover available versions and indexed status |
+| `query-docs` | Get focused excerpts or source links for a chosen library/version |
+| `search` | Search the public documentation index |
+| `fetch` | Read a returned result by ID or a verified publisher page |
 
-These are **separate release repositories** for the same remote Docsy service. Neither contains private crawling infrastructure.
+For example, ask: **“Using official React documentation, explain `useEffect` cleanup and cite the original source.”**
 
-## Source-linked documentation for AI
+## Use Docsy in ChatGPT
 
-Docsy retrieves current and version-specific developer documentation for libraries, frameworks and SDKs. Results include original source links instead of untraceable summaries.
+**[Open the Docsy ChatGPT plugin](https://chatgpt.com/plugins/plugin_asdk_app_6ad6814ca7708191956117b3a3b58eb5).**
 
-**Five read-only MCP tools:** `resolve-library-id`, `list-library-versions`, `query-docs`, `search` and `fetch`.
+This is the publisher-provided ChatGPT plugin link. Availability and sign-in depend on your ChatGPT account and client. A direct URL is not evidence of an independently verified public marketplace approval.
 
-## Tools
+## Connect your AI client
 
-Docsy exposes **five read-only MCP tools**, giving AI coding assistants version-specific public documentation with verifiable source URLs.
+Two **separate** hosted MCP endpoints serve different use cases:
 
-| MCP tool | Description |
-| --- | --- |
-| `resolve-library-id` | Resolve a library, package, framework or SDK name to its canonical Docsy library ID. |
-| `list-library-versions` | List versions of a library and distinguish indexed content from upstream-only tags. |
-| `query-docs` | Retrieve focused version-aware documentation excerpts and code examples with source links. |
-| `search` | Search publicly indexed documentation and return relevant results, publisher URLs and stable IDs. |
-| `fetch` | Read an indexed result by stable ID or a verified publisher page associated with the selected library/version. |
+| Endpoint | Access | Purpose |
+| --- | --- | --- |
+| `https://docsy.remcp.site/mcp/registry` | OAuth 2.1 | Canonical account-linked MCP connection |
+| `https://docsy.remcp.site/mcp/public` | No Docsy account or API key | Rate-limited evaluation against **public** documentation |
 
-### `resolve-library-id`
-Resolve a library name to its canonical Docsy ID when an exact library ID is unknown.
+Both expose the five read-only tools. The public endpoint does **not** make private libraries, account data or arbitrary web URLs accessible. On 31 October 2026, anonymous `initialize`, `tools/list`, `resolve-library-id` and `query-docs` passed a live MCP protocol smoke test; the canonical endpoint still returned HTTP 401 without OAuth. This is **not** a claim of a completed Codex CLI agent test.
 
-### `list-library-versions`
-Discover release versions for a resolved library. Upstream-only tags do not necessarily have indexed documentation.
-
-### `query-docs`
-Ask a focused question about one resolved library and optionally a pinned version, returning verifiable publisher source links. A link-only response is supported.
-
-### `search`
-Search across public indexed documentation; follow a result's stable ID with `fetch` to retrieve a specific source.
-
-### `fetch`
-Fetch a specific indexed result by ID or a verified authorized publisher document page; arbitrary web fetching and private repository access are not supported.
-
-The canonical remote Streamable HTTP endpoint is `https://docsy.remcp.site/mcp/registry` and requires OAuth 2.1 account authorization. A separately rate-limited, account-free public-documentation evaluator is available at `https://docsy.remcp.site/mcp/public` (anonymous production MCP smoke-tested 31 October 2026). Both expose only read-only tools; neither can modify local files or run commands.
-
-
-
-## Connect
-
-**Canonical remote MCP endpoint:** `https://docsy.remcp.site/mcp/registry`
-
-The canonical hosted MCP service **requires OAuth 2.1 account authorization**. Complete the sign-in prompted by your client. Existing clients may continue to use `https://docsy.remcp.site/mcp`. For a limited account-free public documentation evaluation, see [Guest MCP review instructions](docs/ACCOUNT-FREE-REVIEW.md).
-
-| Client | How to connect |
-| --- | --- |
-| **ChatGPT** | Add Docsy as a remote MCP connector where supported, then authorize. |
-| **Claude Code** | Run the command below. |
-| **Codex CLI** | Add the server and log in with the commands below. |
-| **Cursor, VS Code and other MCP clients** | Use the remote HTTP URL in MCP settings. |
-
-**Claude Code**
+**Claude Code — canonical OAuth endpoint**
 
 ```sh
 claude mcp add --transport http docsy https://docsy.remcp.site/mcp/registry
 ```
 
-**Codex CLI**
+**Codex CLI — canonical OAuth endpoint**
 
 ```sh
 codex mcp add docsy --url https://docsy.remcp.site/mcp/registry
 codex mcp login docsy
 ```
 
-**Generic MCP client configuration**
-
-For clients that accept a remote HTTP MCP JSON configuration, use the canonical endpoint. The client will prompt for Docsy OAuth 2.1 sign-in.
+**Cursor, VS Code and other remote MCP clients** — configure a Streamable HTTP connection to the canonical URL:
 
 ```json
 {
@@ -133,134 +87,35 @@ For clients that accept a remote HTTP MCP JSON configuration, use the canonical 
 }
 ```
 
-**Claude Code community marketplace**
+For account-free evaluation and protocol-level commands, see [Public MCP evaluation](docs/ACCOUNT-FREE-REVIEW.md). Some clients initiate OAuth discovery on their own even for an anonymous endpoint; client-specific behavior must be verified separately.
 
-```sh
-claude plugin marketplace add getremcp/docsy-plugin
-claude plugin install docsy@docsy-community
-```
+More guides: [Getting started](docs/GETTING-STARTED.md) · [Client integrations](docs/CLIENT-INTEGRATIONS.md) · [Claude Code community plugin manifest](.claude-plugin/marketplace.json).
 
-For additional clients, see the **[Full setup guide: connecting Docsy to your AI clients](docs/GETTING-STARTED.md)** and [13-client integration reference](docs/CLIENT-INTEGRATIONS.md). A listing in a directory is not equivalent to official OpenAI or Anthropic marketplace approval.
+## Where Docsy is available
 
-## Discover Docsy
+These are **distinct distribution channels**, not interchangeable approval statuses. Records below were checked on **31 October 2026** unless noted.
 
-These public distribution records were verified on 25 October 2026. See the [full distribution matrix](docs/DISTRIBUTION-STATUS.md) for directory links, pending reviews and Smithery migration:
-
-| Channel | Record | Status |
-| --- | --- | --- |
-| [Official MCP Registry](https://registry.modelcontextprotocol.io/?q=io.github.getremcp%2Fdocsy) | `io.github.getremcp/docsy`, v1.0.9 | Published / active |
-| [AI Anytime Awesome MCP Servers](https://github.com/AIAnytime/Awesome-MCP-Servers) | [Docsy PR #313 merged](https://github.com/AIAnytime/Awesome-MCP-Servers/pull/313) | Published 24 Oct 2026; hosted OAuth MCP entry in public directory |
-| [TensorBlock MCP Index](https://github.com/TensorBlock/awesome-mcp-servers) | [Merged Docsy PR #4485](https://github.com/TensorBlock/awesome-mcp-servers/pull/4485) | Accepted into upstream catalog 25 Oct 2026; public index sync may lag |
-| [Cursor Directory](https://cursor.directory/plugins/docsy) | Public Docsy plugin page with **Add to Cursor** and canonical OAuth endpoint | Publicly accessible, verified in Chrome on 24 Oct 2026; not an official Cursor endorsement |
-| [Glama](https://glama.ai/mcp/connectors/io.github.getremcp/docsy) | Remote connector exposing five tools | Listed and publisher-claimed (24 Oct 2026); DNS ownership and OAuth test confirmed |
-| [Sagargupta Awesome MCP Servers](https://github.com/Sagargupta16/awesome-mcp-servers) | [Merged listing PR #212](https://github.com/Sagargupta16/awesome-mcp-servers/pull/212) | Published in GitHub catalog 24 Oct 2026; external site sync may lag |
-| [Awesome Remote MCP Servers](https://github.com/punkpeye/awesome-remote-mcp-servers) | [Docsy in curated remote-server list](https://github.com/punkpeye/awesome-remote-mcp-servers/blob/main/README.md) | Already publicly listed with canonical OAuth endpoint and Glama badge |
-| [mcpub](https://mcpub.dev) | `https://docsy.remcp.site/mcp/registry` | Registered 24 Oct 2026; listed in discovery |
-| [Launch MCP](https://launchmcp.co/mcp/servers/getremcp/docsy-plugin) | [Public Docsy listing](https://launchmcp.co/mcp/servers/getremcp/docsy-plugin) | Public page returned HTTP 200 on 24 Oct 2026 |
-| [MCPRepository](https://mcprepository.com/getremcp/docsy-plugin) | [Public Docsy MCP source listing](https://mcprepository.com/getremcp/docsy-plugin) | Public title and GitHub repository verified 25 Oct 2026 |
-| [LibHunt](https://www.libhunt.com/r/getremcp/docsy) | [SDK & CLI](https://www.libhunt.com/r/getremcp/docsy) | Public source listing |
-| [Ext Ops Panel](https://extops.dev/plugins/mcp/io.github.getremcp/docsy) | [Docsy registry-sourced profile](https://extops.dev/plugins/mcp/io.github.getremcp/docsy) | Public auto-indexed profile, title/source verified 25 Oct 2026; not marketplace approval |
-| [Walnut World](https://walnut.world/w/docsy-plugin) | [Plugin](https://walnut.world/w/docsy-plugin) · [SDK & CLI](https://walnut.world/w/docsy) | Both GitHub-source pages indexed and publicly visible on 25 Oct 2026; publisher ownership not yet claimed |
-| [Awesome Claude Code Plugins](https://github.com/ccplugins/awesome-claude-code-plugins/pull/821) | [Docsy PR #821](https://github.com/ccplugins/awesome-claude-code-plugins/pull/821) | Submitted 24 Oct 2026; awaiting third-party review |
-| [Awesome Gemini CLI Extensions](https://github.com/Piebald-AI/awesome-gemini-cli-extensions/pull/96) | [Docsy PR #96](https://github.com/Piebald-AI/awesome-gemini-cli-extensions/pull/96) | Submitted 24 Oct 2026; awaiting upstream review |
-| [Collabnix Awesome MCP Lists](https://github.com/collabnix/awesome-mcp-lists/pull/264) | [Docsy PR #264](https://github.com/collabnix/awesome-mcp-lists/pull/264) | Submitted 24 Oct 2026; external review pending |
-| [mctrinh Awesome MCP Servers](https://github.com/mctrinh/awesome-mcp-servers/pull/179) | [Docsy PR #179](https://github.com/mctrinh/awesome-mcp-servers/pull/179) | Submitted 24 Oct 2026; external review pending |
-| [AlexMili Awesome MCP](https://github.com/AlexMili/Awesome-MCP/pull/326) | [Docsy PR #326](https://github.com/AlexMili/Awesome-MCP/pull/326) | Closed 24 Oct 2026: catalog requires actual MCP server source; plugin bundle does not qualify. Do not resubmit same bundle. |
-| [FindMCP](https://findmcp.app/submit) | Free Docsy MCP submission ID **320** | Accepted by submission API 25 Oct 2026; independent review pending, not publicly listed yet |
-| [Few Servers](https://www.fewservers.com/mcp/submit/) | Editorial listing/claim request sent 25 Oct 2026 by email | Awaiting independent human review; not a verified listing |
-| [AgenticSkills](https://agenticskills.io/submit?type=mcp) | Free Docsy MCP server submission | Accepted on 25 Oct 2026; weekly editorial review pending, not published |
-| [MCP Harbor](https://mcpharbor.app/submit/) | Free submission accepted on 24 Oct 2026 | Under external review; no public listing independently verified |
-| [MCPizy](https://mcpizy.com/submit/thanks?ref=web_mvnk6me0_a8jruk&tier=standard) | Free Docsy submission ID `web_mvnk6me0_a8jruk` | Accepted 25 Oct 2026; pending external review |
-| [Plug and Ship](https://plugandship.dev/p/docsy-mcp) | Docsy MCP free launch | Public detail page accessible; free daily-board launch scheduled 12 Nov 2026 |
-| [Claude Code community marketplace](.claude-plugin/marketplace.json) | `claude plugin marketplace add getremcp/docsy-plugin` | GitHub-installable, not official Anthropic marketplace approval |
-| [Gemini CLI extension](https://github.com/getremcp/docsy/releases/tag/gemini-v1.0.0) | Tagged extension manifest in the [SDK & CLI repository](https://github.com/getremcp/docsy) | GitHub release, not gallery approval |
-| [ChatGPT, Codex, Cursor and others](docs/CLIENT-INTEGRATIONS.md) | Direct OAuth 2.1 remote MCP connection | Client integration guide, not official marketplace approval |
-
-The former Registry identity [io.github.antonbaider/docsy v1.0.5](https://registry.modelcontextprotocol.io/v0.1/servers/io.github.antonbaider%2Fdocsy/versions/1.0.5) was explicitly marked **deprecated on 25 October 2026**, with migration guidance to [io.github.getremcp/docsy v1.0.9](https://registry.modelcontextprotocol.io/v0.1/servers/io.github.getremcp%2Fdocsy/versions/latest), which remains **active**. Older directories may display the deprecated record; use the organization identity for new installations. Glama publisher ownership was confirmed by the Glama administration UI on 24 Oct 2026; its live badge reports current independent health and quality checks. Other directories and official marketplaces remain subject to their own reviews.
-
-<details>
-<summary><strong>Directory submissions awaiting independent review · expand status table</strong></summary>
-
-### Submission review queue
-
-The following entries are **submitted, not yet approved**; they are not official marketplace endorsement:
-
-| Marketplace | Submission | Status checked 24 Oct 2026 |
-| --- | --- | --- |
-| Cline Marketplace | [PR #332](https://github.com/cline/marketplace/pull/332) | Open; maintainer review required |
-| Kilo Marketplace | [PR #478](https://github.com/Kilo-Org/kilo-marketplace/pull/478) | Open; code review and security checks passed |
-| ToolSDK MCP Registry | [PR #1016](https://github.com/toolsdk-ai/toolsdk-mcp-registry/pull/1016) | Open; schema and Biome checks passed |
-| mcpHQ Awesome MCP Servers | [PR #397](https://github.com/mcpHQ/awesome-mcp-servers/pull/397) | Open; awaiting maintainer review |
-| Ever Works Awesome MCP Servers | [PR #212](https://github.com/ever-works/awesome-mcp-servers/pull/212) | Submitted 24 Oct 2026; detail page and read-only OAuth docs entry awaiting review |
-| Awesome DevOps MCP Servers | [PR #382](https://github.com/rohitg00/awesome-devops-mcp-servers/pull/382) | Submitted 24 Oct 2026; read-only developer docs catalog entry awaiting review |
-| MindPal Awesome Remote MCP Servers | [PR #230](https://github.com/sylviangth/awesome-remote-mcp-servers/pull/230) | Submitted 24 Oct 2026; hosted OAuth listing pending review |
-| YuzeHao Awesome MCP Servers | [PR #718](https://github.com/YuzeHao2023/Awesome-MCP-Servers/pull/718) | Submitted 24 Oct 2026; pending upstream review |
-| Awesome Remote MCP Servers (jaw9c) | [PR #1636](https://github.com/jaw9c/awesome-remote-mcp-servers/pull/1636) | Submitted 24 Oct 2026; hosted OAuth listing pending review |
-| Brethof AI Awesome MCP Servers | [PR #53](https://github.com/BrethofAI/awesome-mcp-servers/pull/53) | Submitted 24 Oct 2026; hosted OAuth details documented; awaiting review |
-
-| Docker MCP Registry | [PR #6062](https://github.com/docker/mcp-registry/pull/6062) | Submitted 24 Oct 2026; pending Docker manual review and OAuth integration validation |
-| ToolHive Catalog | [PR #1781](https://github.com/stacklok/toolhive-catalog/pull/1781) | Submitted; catalog review required |
-| best-of-mcp-servers | [PR #561](https://github.com/tolkonepiu/best-of-mcp-servers/pull/561) | Submitted; YAML validation passed; review required |
-| Awesome MCP List (MobinX) | [PR #926](https://github.com/MobinX/awesome-mcp-list/pull/926) | Submitted; maintainer review pending |
-| CheckMCP | [Free submission](https://checkmcp.dev/submit) | Free audit queued 24 Oct 2026; not audited/verified yet |
-| ProMCP | [Free submission](https://www.promcpservers.com/submit) | Submitted for manual review 24 Oct 2026 |
-| MCPfinder | [Free submission](https://www.mcpfinder.org/submit) | Submitted successfully 24 Oct 2026; reliability review pending |
-| Launch MCP | [Public Docsy listing](https://launchmcp.co/mcp/servers/getremcp/docsy-plugin) | **Publicly indexed 24 Oct 2026**; 3/3 upvotes and site verification accepted. Publisher page still reports missing structured MCP install/tools metadata; completeness is not yet verified |
-| AIBase MCP | [Publisher submission manager](https://aibase.com/user/submitManage?tab=mcp) | Submitted from Google account with official logo and OAuth Streamable HTTP config; **pending review** |
-| ClaudePluginHub (independent) | [Plugin and marketplace submission](https://www.claudepluginhub.com/tools/submit-plugin) | **Both plugin and marketplace submitted** from authenticated publisher account 24 Oct 2026; indexed only after automated validation, **not official Anthropic approval** |
-| GitHub MCP Registry (VS Code / Copilot) | [Onboarding request](https://github.com/github/github-mcp-server/discussions/1257#discussioncomment-19165953) | Official registry identity, tools, OAuth, docs and license provided; **manual curation pending** |
-| VoltAgent Official MCP Servers | [PR #55](https://github.com/VoltAgent/official-mcp-servers/pull/55) | Submitted 25 Oct 2026; awaiting curator review |
-| Awesome Public MCP Servers | [PR #83](https://github.com/bhavyshekhaliya/awesome-public-mcp-servers/pull/83) | Submitted 25 Oct 2026; hosted OAuth docs MCP, review pending |
-| Awesome MCP Tools | [PR #20](https://github.com/Christian-Sidak/awesome-mcp-tools/pull/20) | Submitted 25 Oct 2026; listed as remote documentation tool, review pending |
-| PenguinMiaou Awesome Claude Code Plugins | [PR #10](https://github.com/PenguinMiaou/awesome-claude-code-plugins/pull/10) | Submitted 25 Oct 2026; community review pending, not Anthropic endorsement |
-| itgoyo Awesome Claude Code | [PR #19](https://github.com/itgoyo/awesome-claude-code/pull/19) | Submitted 25 Oct 2026; community review pending, not Anthropic endorsement |
-| Claude Plugins Radar | [PR #3](https://github.com/iliasabk/claude-plugins-radar/pull/3) | Submitted 25 Oct 2026; community review pending, not Anthropic endorsement |
-| ClaudeMods | [Editorial issue #34](https://github.com/omarcevi/claudemods/issues/34) | MCP listing requested 25 Oct 2026; awaiting bot/editor review |
-| Habito Awesome MCP Servers | [PR #297](https://github.com/habitoai/awesome-mcp-servers/pull/297) | Submitted 25 Oct 2026; awaiting external curator review |
-| DhanushNehru Awesome MCP Servers | [PR #127](https://github.com/DhanushNehru/awesome-mcp-servers/pull/127) | Submitted 25 Oct 2026; awaiting external curator review |
-| Awesome Productivity MCP Servers | [PR #47](https://github.com/ExMapo/awesome-productivity-mcp-servers/pull/47) | Submitted 25 Oct 2026; awaiting external curator review |
-| WunderCorp Awesome MCP | [PR #154](https://github.com/wundercorp/awesome-mcp/pull/154) | Submitted 25 Oct 2026; awaiting external curator review |
-| Awesome Codex | [PR #33](https://github.com/ichangyou/awesome-codex/pull/33) | Closed 31 Oct 2026: guest access and firsthand Codex usage evidence requested; not listed |
-| Awesome AI Coding Tools | [PR #7](https://github.com/mahmoudsajjadi/awesome-ai-coding-tools/pull/7) | Submitted 25 Oct 2026; awaiting independent review |
-| Awesome MCP Collection | [PR #72](https://github.com/JustInCache/awesome-mcp-collection/pull/72) | Submitted 25 Oct 2026; awaiting independent review |
-| Albertchamberlain Awesome-MCP | [PR #116](https://github.com/Albertchamberlain/Awesome-MCP/pull/116) | Submitted 25 Oct 2026; independent review pending, not published |
-| Epistates Awesome MCP DevTools | [PR #23](https://github.com/Epistates/awesome-mcp-devtools/pull/23) | Submitted 25 Oct 2026; independent review pending, not published |
-| awesome-mcp.tools (adw0rd) | [PR #187](https://github.com/adw0rd/awesome-mcp-servers/pull/187) | Submitted 25 Oct 2026; external review pending, not a published listing |
-| Backblaze Awesome Agent Infrastructure | [PR #43](https://github.com/backblaze-labs/awesome-agent-infrastructure/pull/43) | Submitted 25 Oct 2026; external review pending, not a published listing |
-| Awesome AI DevTools RU | [PR #3](https://github.com/justxor/awesome-ai-devtools-ru/pull/3) | Submitted 25 Oct 2026; external review pending, not a published listing |
-| Awesome Agentic Engineering | [PR #26](https://github.com/ashishkaloge/awesome-agentic-engineering/pull/26) | Submitted 25 Oct 2026; external review pending, not a published listing |
-| TrackMCP | [Submission portal](https://trackmcp.com/submit-mcp) | Repo already submitted (duplicate receipt 25 Oct 2026); public listing not verified |
-| MCP Index | [Submission form](https://themcpindex.com/submit) | Received; editorial review pending |
-| MCP Market | [Submission queue](https://mcpmarket.com/submit) | Accepted into free queue |
-| MCP Servers | [Submission queue](https://mcpservers.org/submit) | Accepted for free review |
-
-These are independent community sites; listing policies and review decisions are controlled by their maintainers.
-
-**Smithery transition:** The [official notice](https://smithery.ai/future) confirms its API, proxy, CLI/SDK and connection management shut down on **31 October 2026**. The public directory remains curated by Arcade.dev. The publisher response `403 Updating servers has been removed` is a retired API, not a Docsy failure; no new Smithery publication is claimed. Install through the direct OAuth endpoint above, not Smithery proxy or CLI. See [distribution status](docs/DISTRIBUTION-STATUS.md). The Claude Connectors Directory required a paid Claude plan on the signed-in account. LobeHub Market CLI publisher OAuth was completed, but GitHub ownership linkage requires an additional GitHub passkey confirmation; no LobeHub listing has been submitted.
-
-</details>
-
-## Releases and packages
-
-| Channel | Distribution |
+| Channel | Verified record |
 | --- | --- |
-| [GitHub Releases](https://github.com/getremcp/docsy-plugin/releases) | Vetted versioned plugin ZIPs and review recordings |
-| [Official MCP Registry](https://registry.modelcontextprotocol.io/?q=io.github.getremcp%2Fdocsy) | Published `io.github.getremcp/docsy` discovery record |
-| [npm SDK](https://www.npmjs.com/package/@remcp/docsy-sdk) | `@remcp/docsy-sdk` TypeScript documentation lookup |
-| [npm CLI](https://www.npmjs.com/package/@remcp/docsy-cli) | `@remcp/docsy-cli` terminal documentation lookup |
-| [LibHunt](https://www.libhunt.com/r/getremcp/docsy) | Public SDK and CLI source listed and automatically approved 24 Oct 2026 |
+| [ChatGPT plugin](https://chatgpt.com/plugins/plugin_asdk_app_6ad6814ca7708191956117b3a3b58eb5) | Publisher-provided direct link; anonymous verification is blocked by ChatGPT (HTTP 403) |
+| [Official MCP Registry](https://registry.modelcontextprotocol.io/v0.1/servers/io.github.getremcp%2Fdocsy/versions/latest) | `io.github.getremcp/docsy` v1.0.9, canonical OAuth endpoint |
+| [GitHub plugin releases](https://github.com/getremcp/docsy-plugin/releases) | Stable `plugin-v1.0.9`; `plugin-v1.0.10` is a **prerelease review candidate** |
+| [Glama](https://glama.ai/mcp/connectors/io.github.getremcp/docsy) | Public connector page accessible |
+| npm [SDK](https://www.npmjs.com/package/@remcp/docsy-sdk) / [CLI](https://www.npmjs.com/package/@remcp/docsy-cli) | Published `@remcp/docsy-sdk` v0.1.2 / `@remcp/docsy-cli` v0.1.4 |
+| [AI Anytime](https://github.com/AIAnytime/Awesome-MCP-Servers/pull/313) / [TensorBlock](https://github.com/TensorBlock/awesome-mcp-servers/pull/4485) / [Sagargupta](https://github.com/Sagargupta16/awesome-mcp-servers/pull/212) | Three independent GitHub directory pull requests confirmed **merged** |
+| [Claude Code community marketplace](.claude-plugin/marketplace.json) | Installable GitHub manifest; **not** official Anthropic marketplace approval |
 
-**Stable:** [plugin-v1.0.9](https://github.com/getremcp/docsy-plugin/releases/tag/plugin-v1.0.9). **Review candidate (prerelease):** [plugin-v1.0.10](https://github.com/getremcp/docsy-plugin/releases/tag/plugin-v1.0.10). Pre-releases are candidates, not proof of marketplace approval.
+See [Distribution status and review queue](docs/DISTRIBUTION-STATUS.md) for other directories, pending applications and the Smithery transition. The [awesome-codex submission #33](https://github.com/ichangyou/awesome-codex/pull/33) was **closed without merging**; a new submission must wait for a recorded firsthand Codex invocation.
 
-## Security and project scope
+## Releases, scope and security
 
-This is Docsy's **public release-only repository**. It contains vetted plugin manifests, skill metadata, approved artwork and installation instructions. Backend code, databases, crawlers and deployment infrastructure live outside this public distribution.
+This repository is the **public integration and distribution package**, not the hosted Docsy backend. It intentionally includes plugin manifests, client settings, read-only skill metadata, reviewed documentation and brand assets; it does **not** include crawlers, database contents, deployment secrets or a local server implementation.
 
-- **Read-only documentation tools.** Docsy cannot inspect private repositories or execute commands on your device.
-- **Account-scoped OAuth.** Review and revoke sessions from [Connected applications](https://docsy.remcp.site/dashboard/connections).
-- **Traceable releases.** Use [immutable version tags and attached assets](https://github.com/getremcp/docsy-plugin/releases) instead of unreviewed development branches.
-- **Public REST and remote MCP differ.** REST documentation lookups may be anonymous within rate limits; remote MCP requires OAuth.
+- Use the [stable GitHub release](https://github.com/getremcp/docsy-plugin/releases/latest) for downloadable plugin assets; don't assume prereleases are approved marketplace versions.
+- The canonical endpoint uses OAuth 2.1; the public evaluator has its own rate limits and public-corpus boundaries.
+- Never include credentials, personal information or proprietary code in documentation queries or public security reports.
+- For a vulnerability or potential exposure, follow [SECURITY.md](SECURITY.md), not a public issue containing sensitive details.
 
-[Security](SECURITY.md) · [MIT License](LICENSE) · [Privacy](https://docsy.remcp.site/privacy) · [Terms](https://docsy.remcp.site/terms) · [Support](https://docsy.remcp.site/support)
+[SDK & CLI repository](https://github.com/getremcp/docsy) · [Privacy](https://docsy.remcp.site/privacy) · [Terms](https://docsy.remcp.site/terms) · [Support](https://docsy.remcp.site/support) · [MIT License](LICENSE)
 
-<p align="center"><sub>Independent documentation service. Third-party marks are the property of their owners.</sub></p>
+<p align="center"><sub>Docsy is an independent documentation service. External directory listings do not imply endorsement by their platform owners.</sub></p>
