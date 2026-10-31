@@ -1,5 +1,21 @@
 # Docsy public distribution status
 
+> **Live verification snapshot — 31 October 2026.** The tables below retain historical submissions and earlier audit dates. Never infer current approval from an older “pending” row.
+
+- **ChatGPT:** [Open the publisher-provided Docsy plugin link](https://chatgpt.com/plugins/plugin_asdk_app_6ad6814ca7708191956117b3a3b58eb5). Anonymous automated access returned HTTP 403, so public marketplace visibility could not be independently established.
+- **Official MCP Registry:** [`io.github.getremcp/docsy` v1.0.9](https://registry.modelcontextprotocol.io/v0.1/servers/io.github.getremcp%2Fdocsy/versions/latest) returned HTTP 200 and the canonical `/mcp/registry` remote.
+- **Live MCP:** anonymous `/mcp/public` `initialize`, `tools/list`, `resolve-library-id`, `query-docs` HTTP 200; protected `/mcp/registry` HTTP 401 without OAuth.
+- **npm:** `@remcp/docsy-sdk` **0.1.2** and `@remcp/docsy-cli` **0.1.4** resolved from the npm registry.
+- **GitHub:** public [plugin-v1.0.9 stable](https://github.com/getremcp/docsy-plugin/releases/tag/plugin-v1.0.9); [plugin-v1.0.10](https://github.com/getremcp/docsy-plugin/releases/tag/plugin-v1.0.10) is a prerelease, not an approved marketplace listing.
+- **Glama:** [Docsy connector page](https://glama.ai/mcp/connectors/io.github.getremcp/docsy) returned HTTP 200.
+- **Community merges confirmed:** [AI Anytime #313](https://github.com/AIAnytime/Awesome-MCP-Servers/pull/313), [TensorBlock #4485](https://github.com/TensorBlock/awesome-mcp-servers/pull/4485) and [Sagargupta #212](https://github.com/Sagargupta16/awesome-mcp-servers/pull/212).
+- **Cursor Directory:** [Docsy page](https://cursor.directory/plugins/docsy) returned HTTP 429 to the current automated check; previously verified listing remains historical, not freshly confirmed.
+- **Smithery:** [official transition notice](https://smithery.ai/future) says its hosted proxy, API, CLI and SDK shut down on 31 October 2026; directory listings are distinct from usable proxy URLs.
+
+**Review queue recheck:** of the 37 PR links recorded as open on 25 October, **28 open**, **6 merged**, **2 closed without merge**, **1 not retrievable** on 31 October. The newly merged entries are [ToolSDK #1016](https://github.com/toolsdk-ai/toolsdk-mcp-registry/pull/1016), [mcpHQ #452](https://github.com/mcpHQ/awesome-mcp-servers/pull/452), [Collabnix #279](https://github.com/collabnix/awesome-mcp-lists/pull/279), [VoltAgent #55](https://github.com/VoltAgent/official-mcp-servers/pull/55), [PenguinMiaou #12](https://github.com/PenguinMiaou/awesome-claude-code-plugins/pull/12) and [Awesome AI Coding Tools #10](https://github.com/mahmoudsajjadi/awesome-ai-coding-tools/pull/10). [ToolHive #1791](https://github.com/stacklok/toolhive-catalog/pull/1791) and [Awesome Codex #33](https://github.com/ichangyou/awesome-codex/pull/33) were closed without merge. [ccplugins #821](https://github.com/ccplugins/awesome-claude-code-plugins/pull/821) could not be verified by the linked GitHub account. No claim is made that merged directory PRs are official vendor marketplace approval.
+
+---
+
 > **Directory PR recovery (27 October 2026):** Deleted source forks from the 26 October cleanup have been recreated. [36 recovered PRs and the original-to-new mapping](#directory-pr-recovery-27-october-2026) are verified open and awaiting upstream review. Previous merged listings remain unchanged.
 
 Checked **25 October 2026**. A submitted directory listing is **not** an approved marketplace installation.
