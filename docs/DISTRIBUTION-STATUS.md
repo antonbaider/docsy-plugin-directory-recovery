@@ -75,7 +75,7 @@ Thirty-seven PRs below were submitted and remained **open when checked on 25 Oct
 | DhanushNehru Awesome MCP Servers | [#129](https://github.com/DhanushNehru/awesome-mcp-servers/pull/129) — review pending |
 | Awesome Productivity MCP Servers | [#50](https://github.com/ExMapo/awesome-productivity-mcp-servers/pull/50) — review pending |
 | WunderCorp Awesome MCP | [#162](https://github.com/wundercorp/awesome-mcp/pull/162) — review pending |
-| Awesome Codex | [#33](https://github.com/ichangyou/awesome-codex/pull/33) — review pending |
+| Awesome Codex | [#33](https://github.com/ichangyou/awesome-codex/pull/33) — closed 31 Oct; requires account-free trial and concrete firsthand usage |
 | Awesome AI Coding Tools | [#10](https://github.com/mahmoudsajjadi/awesome-ai-coding-tools/pull/10) — review pending |
 | Awesome MCP Collection | [#75](https://github.com/JustInCache/awesome-mcp-collection/pull/75) — review pending |
 | Albertchamberlain Awesome-MCP | [#119](https://github.com/Albertchamberlain/Awesome-MCP/pull/119) — review pending |
@@ -141,7 +141,7 @@ This is a record of the accidental source-fork deletion on **26 October 2026** a
 | `ever-works/awesome-mcp-servers` | [#212](https://github.com/ever-works/awesome-mcp-servers/pull/212) | [#217](https://github.com/ever-works/awesome-mcp-servers/pull/217) | Open — SHA verified |
 | `ExMapo/awesome-productivity-mcp-servers` | [#47](https://github.com/ExMapo/awesome-productivity-mcp-servers/pull/47) | [#50](https://github.com/ExMapo/awesome-productivity-mcp-servers/pull/50) | Open — SHA verified |
 | `habitoai/awesome-mcp-servers` | [#297](https://github.com/habitoai/awesome-mcp-servers/pull/297) | [#306](https://github.com/habitoai/awesome-mcp-servers/pull/306) | Open — SHA verified |
-| `ichangyou/awesome-codex` | [#31](https://github.com/ichangyou/awesome-codex/pull/31) | [#33](https://github.com/ichangyou/awesome-codex/pull/33) | Open — SHA verified |
+| `ichangyou/awesome-codex` | [#31](https://github.com/ichangyou/awesome-codex/pull/31) | [#33](https://github.com/ichangyou/awesome-codex/pull/33) | Closed — account-free review and firsthand Codex example required before resubmission |
 | `iliasabk/claude-plugins-radar` | [#3](https://github.com/iliasabk/claude-plugins-radar/pull/3) | [#5](https://github.com/iliasabk/claude-plugins-radar/pull/5) | Open — SHA verified |
 | `itgoyo/awesome-claude-code` | [#19](https://github.com/itgoyo/awesome-claude-code/pull/19) | [#21](https://github.com/itgoyo/awesome-claude-code/pull/21) | Open — SHA verified |
 | `jaw9c/awesome-remote-mcp-servers` | [#1636](https://github.com/jaw9c/awesome-remote-mcp-servers/pull/1636) | [#1724](https://github.com/jaw9c/awesome-remote-mcp-servers/pull/1724) | Open — SHA verified |

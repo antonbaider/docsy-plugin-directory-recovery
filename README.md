@@ -88,7 +88,7 @@ Search across public indexed documentation; follow a result's stable ID with `fe
 ### `fetch`
 Fetch a specific indexed result by ID or a verified authorized publisher document page; arbitrary web fetching and private repository access are not supported.
 
-The canonical remote Streamable HTTP endpoint is `https://docsy.remcp.site/mcp/registry`. OAuth 2.1 account authorization is required. All five tools are read-only; they cannot modify local files or run commands.
+The canonical remote Streamable HTTP endpoint is `https://docsy.remcp.site/mcp/registry` and requires OAuth 2.1 account authorization. A separately rate-limited, account-free public-documentation evaluator is available at `https://docsy.remcp.site/mcp/public` (anonymous production MCP smoke-tested 31 October 2026). Both expose only read-only tools; neither can modify local files or run commands.
 
 
 
@@ -96,7 +96,7 @@ The canonical remote Streamable HTTP endpoint is `https://docsy.remcp.site/mcp/r
 
 **Canonical remote MCP endpoint:** `https://docsy.remcp.site/mcp/registry`
 
-The hosted MCP service **requires OAuth 2.1 account authorization**. Complete the sign-in prompted by your client. Existing clients may continue to use `https://docsy.remcp.site/mcp`.
+The canonical hosted MCP service **requires OAuth 2.1 account authorization**. Complete the sign-in prompted by your client. Existing clients may continue to use `https://docsy.remcp.site/mcp`. For a limited account-free public documentation evaluation, see [Guest MCP review instructions](docs/ACCOUNT-FREE-REVIEW.md).
 
 | Client | How to connect |
 | --- | --- |
@@ -220,7 +220,7 @@ The following entries are **submitted, not yet approved**; they are not official
 | DhanushNehru Awesome MCP Servers | [PR #127](https://github.com/DhanushNehru/awesome-mcp-servers/pull/127) | Submitted 25 Oct 2026; awaiting external curator review |
 | Awesome Productivity MCP Servers | [PR #47](https://github.com/ExMapo/awesome-productivity-mcp-servers/pull/47) | Submitted 25 Oct 2026; awaiting external curator review |
 | WunderCorp Awesome MCP | [PR #154](https://github.com/wundercorp/awesome-mcp/pull/154) | Submitted 25 Oct 2026; awaiting external curator review |
-| Awesome Codex | [PR #31](https://github.com/ichangyou/awesome-codex/pull/31) | Submitted 25 Oct 2026; awaiting independent review |
+| Awesome Codex | [PR #33](https://github.com/ichangyou/awesome-codex/pull/33) | Closed 31 Oct 2026: guest access and firsthand Codex usage evidence requested; not listed |
 | Awesome AI Coding Tools | [PR #7](https://github.com/mahmoudsajjadi/awesome-ai-coding-tools/pull/7) | Submitted 25 Oct 2026; awaiting independent review |
 | Awesome MCP Collection | [PR #72](https://github.com/JustInCache/awesome-mcp-collection/pull/72) | Submitted 25 Oct 2026; awaiting independent review |
 | Albertchamberlain Awesome-MCP | [PR #116](https://github.com/Albertchamberlain/Awesome-MCP/pull/116) | Submitted 25 Oct 2026; independent review pending, not published |
