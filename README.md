@@ -88,7 +88,7 @@ Search across public indexed documentation; follow a result's stable ID with `fe
 ### `fetch`
 Fetch a specific indexed result by ID or a verified authorized publisher document page; arbitrary web fetching and private repository access are not supported.
 
-The canonical remote Streamable HTTP endpoint is `https://docsy.remcp.site/mcp/registry` and requires OAuth 2.1 account authorization. A separate bounded public-documentation evaluator is available at `https://docsy.remcp.site/mcp/public` after its production rollout is verified. Both expose only read-only tools; neither can modify local files or run commands.
+The canonical remote Streamable HTTP endpoint is `https://docsy.remcp.site/mcp/registry` and requires OAuth 2.1 account authorization. A separately rate-limited, account-free public-documentation evaluator is available at `https://docsy.remcp.site/mcp/public` (anonymous production MCP smoke-tested 31 October 2026). Both expose only read-only tools; neither can modify local files or run commands.
 
 
 

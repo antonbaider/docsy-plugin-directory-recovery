@@ -1,8 +1,11 @@
 # Account-free Docsy MCP evaluation for Codex
 
-> Publication gate: do not advertise this route as working until the backend
-> and edge rollout of [docsy-full PR #851](https://github.com/antonbaider/docsy-full/pull/851)
-> has passed an external anonymous smoke test.
+> Production smoke verification, 31 October 2026: after
+> [docsy-full PR #851](https://github.com/antonbaider/docsy-full/pull/851)
+> merged, anonymous `initialize`, `tools/list`, `resolve-library-id`, and
+> `query-docs` returned HTTP 200 from the live guest endpoint. The canonical
+> `/mcp/registry` returned HTTP 401 without OAuth. This is an HTTP/MCP test,
+> **not** evidence of a successful Codex CLI session.
 
 Docsy's canonical, account-linked MCP endpoint remains
 `https://docsy.remcp.site/mcp/registry` and requires OAuth 2.1.
@@ -19,6 +22,19 @@ Docsy account, API key, or OAuth grant. It has exactly five read-only tools:
 and `fetch`. It does not expose the hosted backend source code. The public
 plugin repository contains the client integration and distribution metadata;
 the hosted backend is maintained separately.
+
+## Verified anonymous API/MCP smoke test
+
+On 31 October 2026, the live guest endpoint returned HTTP 200 for
+`initialize`, `tools/list` (five `noauth` tools), `resolve-library-id`
+for React, and `query-docs` for `useEffect` cleanup. The documentation result
+included this version-pinned official source:
+
+https://github.com/reactjs/react.dev/blob/0821e7d9428a6c58c922765b891bbffba9ed6249/src/content/reference/react/useEffect.md
+
+This is independent protocol testing, not a Codex agent tool-call trace.
+The external Codex directory re-submission still requires a **real Codex CLI
+invocation**, including the tool calls and returned citations.
 
 ## Run a real Codex evaluation
 

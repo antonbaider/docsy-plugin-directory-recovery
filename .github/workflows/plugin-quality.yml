@@ -45,7 +45,7 @@ jobs:
             'docs/DISTRIBUTION-STATUS.md':
               '8a7d996f6b28a9340c0738fd69066cb627deccb14aa77b979a8840952d99a0f3',
             'docs/ACCOUNT-FREE-REVIEW.md':
-              '285d28c2724d4f0430e8fa76844f589e3e47a652789a441f1c3764f8ee9a32c7',
+              '7bb1d6b81c87314372e88b2c899493d60a18fb3f19dc49a4e1243851becd4f28',
             'docs/README.zh-CN.md':
               '6e1c9d87d21e456140acc8e6ea0b086556867d206540cdd248ba8f728de18d32',
           }
